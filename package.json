@@ -1,0 +1,47 @@
+{
+  "name": "twoja-stara-bot",
+  "version": "1.0.0",
+  "description": "",
+  "engines": {
+    "node": "12.16.1"
+  },
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.16.1",
+    "command-line-args": "^5.0.1",
+    "csurf": "^1.9.0",
+    "dotenv": "^8.0.0",
+    "ejs": "^2.5.7",
+    "express": "^4.17.1",
+    "express-session": "^1.15.6",
+    "http-auth": "^3.2.3",
+    "memory-cache": "^0.2.0",
+    "mongodb": "^3.5.4",
+    "passport": "^0.4.0",
+    "passport-twitter": "^1.0.4",
+    "prompt-promise": "^1.0.3",
+    "query-string": "^5.0.1",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.2",
+    "socket.io": "2.0.4",
+    "twit": "^2.2.11",
+    "uuid": "^3.2.1",
+    "https": "^1.0.0",
+    "util": "^0.12.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/msl0/twoja-stara"
+  },
+  "keywords": [
+    "node",
+    "heroku",
+    "express",
+    "webhook",
+    "twitter"
+  ],
+  "license": "MIT"
+}
