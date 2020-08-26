@@ -287,7 +287,7 @@ function thanksForTweets() {
               console.log(`[DEBUG] key: ${key}, unique_users:  ${unique_users}, dm_messages: ${dm_messages}`)
               console.log(`[DEBUG] msg_number: ${msg_number}, unique_users[key].user_id: ${unique_users[key].user_id}, dm_messages[msg_number]:  ${dm_messages[msg_number].Message}, unique_users[key].screen_name: ${unique_users[key].screen_name}`)
               sendDM(unique_users[key].user_id, dm_messages[msg_number].Message, unique_users[key].screen_name)
-            }, 1000 * delay);
+            }, 1000 * 10 * delay);
           }
         });
       } else {
@@ -314,7 +314,7 @@ function refollow(follow_limit, unfollow_multiplier) {
             if (toFollow.length > 0) {
               console.log(toFollow);
               var follow_update = toFollow.map(x => x._id)
-              for (user in toFollow) {
+              for (let user in toFollow) {
                 setTimeout(() => {
                   console.log(`[LOG] ${parseInt(user) + 1}. Follow: ${toFollow[user].User}`)
                   follow(toFollow[user].User)
@@ -336,7 +336,7 @@ function refollow(follow_limit, unfollow_multiplier) {
                 }
                 toUnfollow = toUnfollow.filter(removeActive);
                 var unfollow_update = toUnfollow.map(x => x._id)
-                for (user in toUnfollow) {
+                for (let user in toUnfollow) {
                   setTimeout(() => {
                     console.log(`[LOG] ${parseInt(user) + 1}. Unfollow: ${toUnfollow[user].User}`)
                     unfollow(toUnfollow[user].User)
